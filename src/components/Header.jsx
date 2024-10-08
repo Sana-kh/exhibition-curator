@@ -28,7 +28,7 @@ const Header = () => {
           <Link to="/search">Search</Link>
         </div>
         <div className="nav-right">
-          <Link to="/account">Account</Link> {/* Account link */}
+          <Link to="/account">Account</Link>
           {user && <button onClick={handleLogout}>Logout</button>}
         </div>
       </nav>

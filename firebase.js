@@ -21,45 +21,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 export const auth = getAuth();
-// const signIn = () => {
-// const auth = getAuth();
-// signInWithEmailAndPassword(auth, email, password)
-//   .then((userCredential) => {
-//     // Signed in 
-//     const user = userCredential.user;
-//     // ...
-//   })
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//   });
-// }
-//   export default signIn;
-// export const signIn = async (email, password) => {
-//     try {
-//       const userCredential = await signInWithEmailAndPassword(auth, email, password);
-//       console.log("User signed in:", userCredential.user);
-//       return userCredential.user;
-//     } catch (error) {
-//       console.error("Error signing in:", error); // Log the entire error object
-  
-//       const errorCode = error.code;
-//       let customErrorMessage = "An error occurred during sign-in."; // Default message
-  
-//       // Customize error messages based on error code
-//       if (errorCode === 'auth/user-not-found') {
-//         customErrorMessage = "You do not have an account. Please sign up.";
-//       } else if (errorCode === 'auth/wrong-password') {
-//         customErrorMessage = "Incorrect password. Please try again.";
-//       } else if (errorCode === 'auth/invalid-email') {
-//         customErrorMessage = "The email address is not valid.";
-//       } else if (errorCode === 'auth/invalid-credential') {
-//         customErrorMessage = "Invalid credentials provided.";
-//       }
-  
-//       throw new Error(customErrorMessage); // Throw the customized error
-//     }
-//   };
   
 export const signIn = async (email, password) => {
     try {
@@ -67,7 +28,7 @@ export const signIn = async (email, password) => {
       console.log("User signed in:", userCredential.user);
       return userCredential.user;
     } catch (error) {
-      console.error("Full error object:", error); // Log the entire error object
+      console.error("Full error object:", error);
   
       const errorCode = error.code;
       console.error("Error code:", errorCode);
@@ -89,7 +50,7 @@ export const signIn = async (email, password) => {
           customErrorMessage = "An error occurred during sign-in.";
       }
       console.error("Custom error message:", customErrorMessage);
-      throw new Error(customErrorMessage); // Throw the customized error
+      throw new Error(customErrorMessage); 
     }
   };
   export const createUser = async (email, password) => {
@@ -101,6 +62,6 @@ export const signIn = async (email, password) => {
       return userCredential.user; 
     } catch (error) {
       console.error("Error signing up:", error);
-      throw error; // Throw error to be caught in SignUp component
+      throw error; 
     }
   };

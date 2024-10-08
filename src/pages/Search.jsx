@@ -195,35 +195,7 @@ const Search = () => {
                 {error}
               </p>
             : <div className="artwork-grid">
-                {/* {searchResults.map((artwork, index) =>
-                  <div className="artwork-card" key={index}>
-                    <div
-                      className="image-container"
-                      onClick={() =>
-                        handleImageClick(
-                          artwork.edmPreview
-                            ? artwork.edmPreview[0]
-                            : artwork.primaryimageurl
-                        )}
-                      style={{ width: "150px" }}
-                    >
-                      <img
-                        className="image"
-                        src={
-                          artwork.edmPreview
-                            ? artwork.edmPreview[0]
-                            : artwork.primaryimageurl
-                        }
-                        alt={artwork.title}
-                      />
-                    </div>
-                    <p>
-                      <Link to={`/artwork/${index}`} state={{ artwork }}>
-                        {artwork.title}
-                      </Link>
-                    </p>
-                  </div>
-                )} */}
+               
                 {searchResults.map((artwork, index) =>
                   <div className="artwork-card" key={index}>
                     <div
