@@ -9,7 +9,8 @@ Features
 --Responsive design for mobile and desktop
 
 Live Demo
-The project is hosted on Netlify.
+The project is hosted on Google Firebase:
+https://exhibition-curator-eb6a1.web.app/
 
 Running Locally
 
