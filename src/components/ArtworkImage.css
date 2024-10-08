@@ -1,0 +1,14 @@
+.image-container {
+    position: relative;
+    display: inline-block;
+    cursor:pointer;
+  }
+  
+  .image {
+    transition: transform 0.3s ease;
+  }
+  
+  .zoomed .image {
+    transform: scale(2); /* Adjust the zoom scale as needed */
+  }
+  
